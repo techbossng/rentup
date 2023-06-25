@@ -9,17 +9,16 @@ const Contact = () => {
       <section className='contact mb'>
         <Back name='Contact Us' title='Get Helps & Friendly Support' cover={img} />
         <div className='container'>
-          <form className='shadow'>
             <h4>Fillup The Form</h4> <br />
-            <div>
-              <input type='text' placeholder='Name' />
-              <input type='text' placeholder='Email' />
-            </div>
-            <input type='text' placeholder='Subject' />
-            <textarea cols='30' rows='10'></textarea>
-            <button>Submit Request</button>
-          </form>
-        </div>
+            <form action="https://formspree.io/f/meqwynvb" method="POST" className="contact-inputs">                   
+            <input type="text" name="username" placeholder="Full name"
+              autoComplete="off" required />
+              <input type="email" name="Email" placeholder="Email"
+              autoComplete="off" required />            
+            <textarea name="message" cols="30" rows="6" placeholder="Message"  autoComplete="off" required></textarea>
+            <button>Submit Request</button>            
+           </form>
+        </div>        
       </section>
     </>
   )
